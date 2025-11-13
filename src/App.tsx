@@ -1,10 +1,14 @@
-import React from 'react'
+import {  Routes } from "react-router-dom"
+import Navbar from "./components/shared/Navbar"
 
-function App() {
+const App = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+    <Navbar />
+      <Routes>
+        {/* <Route path=""/> */}
+      </Routes>
+    </>
   )
 }
 
