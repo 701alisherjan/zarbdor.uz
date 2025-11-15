@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/pages/navbar/Navbar";
 import Footer from "./components/pages/footer/Footer";
-import Hero from "./components/pages/hero/Hero";
+import Hero from "./components/pages/Home/Home";
 
 function App() {
   return (
