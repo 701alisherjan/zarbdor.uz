@@ -54,19 +54,16 @@ export default function Navbar() {
 
   return (
     <header className="w-full border-b bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      {/* Top bar: logo + currency */}
       <div className="flex flex-wrap max-w-6xl mx-auto justify-between items-center px-4 py-2 text-sm sm:text-base border-b border-gray-200 dark:border-gray-700">
-        {/* Logo */}
         <div className="flex items-center gap-2">
           <img
             src="https://png.pngtree.com/png-vector/20230209/ourmid/pngtree-letter-z-logo-png-image_6590691.png"
             alt="Zarbdor.uz"
             className="h-7 w-auto"
           />
-          <span className="font-semibold text-base sm:text-lg">ZARBDOR.UZ</span>
+          <span className="font-semibold text-base sm:text-lg">ARBDOR.UZ</span>
         </div>
 
-        {/* Desktop: Currency / Search */}
         <div className="hidden lg:flex flex-1 justify-center items-center gap-6">
           {!searchActive ? (
             <div className="flex flex-wrap justify-center gap-6 items-center">
@@ -117,7 +114,6 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Icons */}
         <div className="flex items-center gap-2 mt-2 sm:mt-0">
           {!searchActive && (
             <Button
@@ -134,7 +130,6 @@ export default function Navbar() {
             {darkMode ? <Sun size={18} /> : <Moon size={18} />}
           </Button>
 
-          {/* Mobile menu toggle */}
           <Button
             size="icon"
             variant="ghost"
@@ -146,7 +141,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Desktop: Categories bar */}
       <div className="hidden lg:block border-b border-gray-200 dark:border-gray-700">
         <nav className="flex justify-center gap-6 py-2 font-bold text-lg sm:text-2xl overflow-x-auto whitespace-nowrap px-4">
           {categories.map((category, index) => (
