@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function LiveCarousel() {
+export default function HeroLives() {
   const items = [
     {
       title: "O‘zbekistonda yangi aeroport qurilishi boshlandi",

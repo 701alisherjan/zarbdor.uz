@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function MainCarousel() {
+export default function HeroVideo() {
   const slides = [
     {
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeaaNJ_HBugn86dadxBsjoSWGtAQ2h9Tb1Xw&s",
@@ -31,7 +31,6 @@ export default function MainCarousel() {
 
   const [index, setIndex] = useState(0);
 
-  // 🔥 AUTOPLAY – 3 sekundda almashadi, qotib qolmaydi
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
@@ -42,17 +41,14 @@ export default function MainCarousel() {
 
   return (
     <div className="relative w-full h-[420px] rounded-xl overflow-hidden shadow-xl select-none">
-      {/* SLIDE IMAGE */}
       <img
         src={slides[index].img}
         alt="slide"
         className="w-full h-full object-cover transition-all duration-700"
       />
 
-      {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* TEXT */}
       <div className="absolute bottom-6 left-6 text-white max-w-xl">
         <h2 className="text-3xl font-semibold drop-shadow-lg">
           {slides[index].title}
@@ -60,7 +56,6 @@ export default function MainCarousel() {
         <p className="text-sm mt-2 opacity-80">{slides[index].date}</p>
       </div>
 
-      {/* LEFT BUTTON */}
       <button
         onClick={() =>
           setIndex((prev) => (prev - 1 + slides.length) % slides.length)
@@ -70,7 +65,6 @@ export default function MainCarousel() {
         ‹
       </button>
 
-      {/* RIGHT BUTTON */}
       <button
         onClick={() => setIndex((prev) => (prev + 1) % slides.length)}
         className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white text-3xl px-4 py-2 rounded-full hover:bg-black/60 transition"
@@ -78,7 +72,6 @@ export default function MainCarousel() {
         ›
       </button>
 
-      {/* DOTS */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {slides.map((_, i) => (
           <button
