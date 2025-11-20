@@ -58,7 +58,7 @@ export default function Footer() {
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSADMTEo4YEurEn-gXFBOfumKYAJMviq-T9ww&s" alt="Google Play" className="h-10" />
               <img src="https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/tablets/matepad-11/new-img/imgs/HUAWEI-MatePad-11-2.svg" alt="App Gallery" className="h-10" />
             </div>
-
+salom
             <span className="border px-4 py-1 rounded text-sm">16+</span>
           </div>
 
