@@ -91,12 +91,12 @@ const NewsCard = ({ title, image, views, time }: NewsItem) => (
   <div className="flex h-24 gap-4 mb-4">
     <img src={image} alt={title} className="w-24 h-24 object-cover rounded" />
     <div className="flex flex-col justify-between">
-      <p className="text-sm line-clamp-2">{title}</p>
+      <p className="text-sm line-clamp-2 ">{title}</p>
       <div className="flex justify-between text-xs text-gray-500">
-        <span className="flex items-center gap-1 text-black">
+        <span className="flex items-center gap-1 dark:text-gray-400">
           <Eye size={14} /> {views}
         </span>
-        <span className="text-black">{time}</span>
+        <span className="dark:text-gray-400">{time}</span>
       </div>
     </div>
   </div>
@@ -117,7 +117,7 @@ const NewsColumn = ({ name, items }: NewsCategory) => (
 );
 
 const NewsSection = () => (
-  <div className="flex gap-6 max-w-6xl mx-auto">
+  <div className="flex gap-6 max-w-6xl mx-auto dark:text-gray-400 ">
     {newsData.map((cat, i) => (
       <NewsColumn key={i} {...cat} />
     ))}

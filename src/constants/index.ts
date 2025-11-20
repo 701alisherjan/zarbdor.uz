@@ -26,7 +26,7 @@ export const SOCIAL_ICONS = [
   {
     id: "instagram",
     icon: FaInstagram,
-    link: "https://instagram.com",
+    link: "https://instagram.com/0_absamatov_0",
     color: "hover:text-pink-600",
   },
   {

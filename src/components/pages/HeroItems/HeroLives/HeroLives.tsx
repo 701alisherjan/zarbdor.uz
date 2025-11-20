@@ -87,7 +87,7 @@ export default function HeroLives() {
   }, [items.length]);
 
   return (
-    <div className="bg-red-600 text-white rounded-xl p-4 h-[520px] overflow-hidden shadow-xl">
+    <div className="bg-red-600 text-white rounded-xl p-4 h-[520px] overflow-hidden shadow-xl ">
       <h2 className="text-xl font-bold mb-4">Live</h2>
 
       <div className="relative h-full">

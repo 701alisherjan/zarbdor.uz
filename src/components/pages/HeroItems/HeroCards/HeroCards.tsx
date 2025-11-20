@@ -12,7 +12,7 @@ const newsData = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGX3YEwmMWZqLMZdsvhh8qpFkJzzavHNblCQ&s",
     category: "Texno",
     time: "2 soat oldin",
-    video: "https://www.youtube.com/embed/v-9LW78-JPs", // Yangilandi :contentReference[oaicite:0]{index=0}
+    video: "https://www.youtube.com/embed/v-9LW78-JPs",
   },
   {
     id: 2,
@@ -23,9 +23,8 @@ const newsData = [
       "https://www.gazeta.uz/media/img/2025/07/OIYHdt17531015405058_b.webp",
     category: "Iqtisod",
     time: "4 soat oldin",
-    video: "https://www.youtube.com/embed/JiTHfE-qYGw", // Yangilandi :contentReference[oaicite:1]{index=1}
+    video: "https://www.youtube.com/embed/JiTHfE-qYGw",
   },
-
   {
     id: 3,
     title: "Futbol bo‘yicha Yevropa Chempionatida kutilmagan g‘alaba",
@@ -48,7 +47,8 @@ export default function HeroCards() {
         {newsData.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer group"
+            className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden 
+            shadow hover:shadow-lg transition cursor-pointer group"
             onClick={() => setSelectedVideo(item.video)}
           >
             <div className="w-full h-48 relative">
@@ -74,26 +74,31 @@ export default function HeroCards() {
             </div>
 
             <div className="p-4">
-              <h2 className="text-lg font-semibold">{item.title}</h2>
-              <p className="text-gray-600 text-sm mt-2">{item.description}</p>
-              <p className="text-gray-400 text-xs mt-3">{item.time}</p>
+              <h2 className="text-lg font-semibold dark:text-white">
+                {item.title}
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
+                {item.description}
+              </p>
+              <p className="text-gray-400 dark:text-gray-500 text-xs mt-3">
+                {item.time}
+              </p>
             </div>
           </div>
         ))}
       </div>
 
       {selectedVideo && (
-        <div className="fixed inset-0 bg-black/90 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-black/90 dark:bg-black/95 flex justify-center items-center z-50">
           <div className="relative w-full h-full flex justify-center items-center">
-            {/* Close Button */}
             <button
               className="absolute top-5 right-5 text-white text-4xl font-bold z-50"
               onClick={() => setSelectedVideo(null)}
             >
               &times;
             </button>
-            {/* Video Player */}{" "}
-            <div className="w-full h-full max-w-[95vw] max-h-[95vh]">
+
+            <div className="w-full h-full max-w-[95vw] max-h-[95vh] bg-white dark:bg-gray-900 rounded-lg">
               <iframe
                 src={selectedVideo}
                 title="Video"

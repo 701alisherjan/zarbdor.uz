@@ -5,7 +5,7 @@ import NewsSection from "../pages/NewItem/newItem";
 
 function Home() {
   return (
-    <div className="">
+    <div className="bg-white dark:bg-gray-900 min-h-screen">
       <Layout />
       <NewsPage />
       <Carusel />
