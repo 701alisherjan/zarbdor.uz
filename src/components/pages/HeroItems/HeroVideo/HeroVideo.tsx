@@ -47,7 +47,7 @@ export default function HeroVideo() {
         className="w-full h-full object-cover transition-all duration-700"
       />
 
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-gray-900/40"></div>
 
       <div className="absolute bottom-6 left-6 text-white max-w-xl">
         <h2 className="text-3xl font-semibold drop-shadow-lg">
