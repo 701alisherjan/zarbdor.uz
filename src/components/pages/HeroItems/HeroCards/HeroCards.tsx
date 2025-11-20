@@ -39,7 +39,7 @@ const newsData = [
   },
 ];
 
-export default function NewsSection() {
+export default function HeroCards() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   return (
