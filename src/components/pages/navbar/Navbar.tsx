@@ -38,7 +38,7 @@ export default function Navbar() {
       });
       setRates(filtered);
     } catch (err) {
-      console.error("Kurslarni olishda xatolik:", err);
+      console.error(err);
     }
   };
 
@@ -95,17 +95,26 @@ export default function Navbar() {
               ))}
             </div>
           ) : (
-            <div className="flex items-center gap-2">
+            <div className="relative flex items-center">
+              <div className="absolute left-3 text-gray-500 dark:text-gray-300">
+                <Search size={16} />
+              </div>
+
               <input
                 type="text"
+                autoFocus
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Qidirish..."
-                className="w-64 px-3 py-1 rounded border duration-300 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-64 px-10 py-2 rounded-xl backdrop-blur-md bg-white/60 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700 
+                shadow-[0_4px_20px_rgba(0,0,0,0.12)] dark:shadow-[0_4px_20px_rgba(255,255,255,0.1)]
+                text-gray-900 dark:text-gray-100 outline-none transition-all duration-300"
               />
-              <Button
+
+              <Button 
                 size="icon"
                 variant="ghost"
+                className="ml-1"
                 onClick={() => setSearchActive(false)}
               >
                 <X size={20} />
@@ -114,7 +123,7 @@ export default function Navbar() {
           )}
         </div>
 
-        <div className="flex items-center gap-2 mt-2 sm:mt-0">
+        <div className="flex items-center gap-3 mt-2 sm:mt-0">
           {!searchActive && (
             <Button
               size="icon"
@@ -126,9 +135,28 @@ export default function Navbar() {
             </Button>
           )}
 
-          <Button size="icon" variant="ghost" onClick={toggleTheme}>
-            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-          </Button>
+          <div className="ml-1">
+            <div
+              onClick={toggleTheme}
+              className={`relative w-12 h-6 rounded-full cursor-pointer transition-all duration-300 ${
+                darkMode
+                  ? "bg-red-500 shadow-[0_0_10px_rgba(255,0,0,0.5)]"
+                  : "bg-gray-300"
+              }`}
+            >
+              <div
+                className={`absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-white shadow-[0_0_6px_rgba(0,0,0,0.25)] transition-all duration-300 ease-out flex items-center justify-center ${
+                  darkMode ? "translate-x-6 rotate-180" : "translate-x-1"
+                }`}
+              >
+                {darkMode ? (
+                  <Sun size={14} className="text-yellow-300" />
+                ) : (
+                  <Moon size={14} className="text-gray-700" />
+                )}
+              </div>
+            </div>
+          </div>
 
           <Button
             size="icon"
@@ -162,13 +190,19 @@ export default function Navbar() {
 
       {mobileMenu && (
         <div className="lg:hidden px-4 py-3 border-t border-gray-200 dark:border-gray-700 space-y-4">
-          <div className="flex items-center gap-2">
+          <div className="relative flex items-center">
+            <div className="absolute left-3 text-gray-500 dark:text-gray-300">
+              <Search size={16} />
+            </div>
+
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Qidirish..."
-              className="w-full px-3 py-1 rounded border duration-300 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full px-10 py-2 rounded-xl backdrop-blur-md bg-white/60 dark:bg-gray-800/40 border border-gray-300 dark:border-gray-700 
+              shadow-[0_4px_20px_rgba(0,0,0,0.12)] dark:shadow-[0_4px_20px_rgba(255,255,255,0.1)] 
+              text-gray-900 dark:text-gray-100 outline-none transition-all duration-300"
             />
           </div>
 
