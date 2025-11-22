@@ -52,7 +52,7 @@ export default function Carusel() {
   const infiniteItems = [...items, ...items];
 
   return (
-    <section className="bg-white dark:bg-gray-950 text-gray-900 dark:text-white py-10 font-['Roboto',sans-serif] transition-colors duration-300">
+    <section className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-10 font-['Roboto',sans-serif] transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-6 border-b border-gray-200 dark:border-white/20 pb-2">
           <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">

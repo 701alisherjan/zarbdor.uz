@@ -2,7 +2,7 @@ import { SOCIAL_ICONS } from "@/constants";
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t   dark:text-white mt-10">
+    <footer className="w-full border-t   border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white  ">
       <div className="max-w-7xl mx-auto py-10 px-5 flex flex-col lg:flex-row justify-between gap-10">
         <div className="flex flex-col gap-5">
           <div className="flex items-center gap-3">
