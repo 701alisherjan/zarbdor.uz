@@ -30,9 +30,9 @@ const NewsPage = () => {
   ];
 
   return (
-    <div className="w-full flex justify-center pt-6">
+    <div className="w-full flex justify-center pt-6 ">
       <div className="w-full max-w-[1450px] px-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
+        <div className="px-4 py-3 rounded-2xl lg:col-span-2 shadow-md border-2">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-bold text-red-600">
               Сўнгги янгиликлар
@@ -64,7 +64,7 @@ const NewsPage = () => {
         </div>
 
         <div className="space-y-6">
-          <div className="border rounded-lg p-4 border-gray-200 dark:border-gray-700">
+          <div className="border rounded-lg p-4 border-gray-200 dark:border-gray-700 shadow-md">
             <h2 className="text-lg font-bold text-red-600 mb-3">
               Тренддагилар
             </h2>
@@ -80,7 +80,7 @@ const NewsPage = () => {
             </ul>
           </div>
 
-          <div className="border rounded-lg p-4 border-gray-200 dark:border-gray-700">
+          <div className="border rounded-lg p-4 border-gray-200 dark:border-gray-700 shadow-md">
             <h2 className="text-lg font-bold text-red-600 mb-3">ZARBDOR.UZ</h2>
             <ul className="space-y-2">
               {qalampirFM.map((item, idx) => (
