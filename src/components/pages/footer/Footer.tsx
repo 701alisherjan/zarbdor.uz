@@ -76,7 +76,7 @@ export default function Footer() {
               />
             </div>
 
-            <span className="border px-4 py-1 rounded text-sm">16+</span>
+            <span className="border px-4 py-1 rounded text-sm">12+</span>
           </div>
         </div>
       </div>
