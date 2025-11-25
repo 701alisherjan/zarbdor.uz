@@ -35,15 +35,14 @@ export default function HeroVideo() {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
     }, 3000);
-
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, []);
 
   return (
     <div className="relative w-full h-[420px] rounded-xl overflow-hidden shadow-xl select-none">
       <img
         src={slides[index].img}
-        alt="slide"
+        alt={slides[index].title}
         className="w-full h-full object-cover transition-all duration-700"
       />
 
@@ -53,21 +52,21 @@ export default function HeroVideo() {
         <h2 className="text-3xl font-semibold drop-shadow-lg">
           {slides[index].title}
         </h2>
-        <p className="text-sm mt-2 opacity-80">{slides[index].date}</p>
+        <p className="text-sm opacity-80">{slides[index].date}</p>
       </div>
 
       <button
         onClick={() =>
           setIndex((prev) => (prev - 1 + slides.length) % slides.length)
         }
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white text-3xl px-4 py-2 rounded-full hover:bg-black/60 transition"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 text-white text-2xl px-3 py-1 rounded-full hover:bg-black/50 transition"
       >
         ‹
       </button>
 
       <button
         onClick={() => setIndex((prev) => (prev + 1) % slides.length)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white text-3xl px-4 py-2 rounded-full hover:bg-black/60 transition"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 text-white text-2xl px-3 py-1 rounded-full hover:bg-black/50 transition"
       >
         ›
       </button>
@@ -77,12 +76,13 @@ export default function HeroVideo() {
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full transition-all 
-              ${index === i ? "bg-white scale-125" : "bg-gray-300 opacity-60"}
-            `}
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === i ? "bg-white scale-125" : "bg-gray-300 opacity-60"
+            }`}
           ></button>
         ))}
       </div>
     </div>
   );
 }
+
