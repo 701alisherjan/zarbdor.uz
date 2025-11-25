@@ -49,6 +49,81 @@ export const SOCIAL_ICONS = [
   },
 ];
 
+export const liveItems = [
+  {
+    title: "O‘zbekistonda yangi aeroport qurilishi boshlandi",
+    desc: "Loyiha 2026 yilgacha bosqichma-bosqich amalga oshirilishi rejalashtirilgan.",
+    time: "15:48",
+    category: "Iqtisod",
+  },
+  {
+    title: "Toshkentda kuchli shamol daraxtlarni qulatdi",
+    desc: "Hozircha jabrlanganlar haqida rasmiy ma’lumot berilmadi.",
+    time: "15:42",
+    category: "Ob-havo",
+  },
+  {
+    title: "FIFA 2026 yil uchun yangi qoidalarni e’lon qildi",
+    desc: "Yangi format futbol muxlislari va ekspertlar orasida keng muhokama qilinmoqda.",
+    time: "15:36",
+    category: "Sport",
+  },
+  {
+    title: "Rossiya–Ukraina chegarasida vaziyat keskinlashdi",
+    desc: "Tomonlar o‘zaro ayblovlar bilan chiqishda davom etmoqda.",
+    time: "15:31",
+    category: "Dunyo",
+  },
+  {
+    title: "iPhone 17 Ultra haqida dastlabki ma’lumotlar paydo bo‘ldi",
+    desc: "Model kamerasi va batareyasi sezilarli darajada yaxshilanishi kutilmoqda.",
+    time: "15:24",
+    category: "Texnologiya",
+  },
+  {
+    title: "Samarqandda yangi turizm markazi ochildi",
+    desc: "Markaz bir vaqtning o‘zida 10 ming turistni qabul qila oladi.",
+    time: "15:18",
+    category: "Turizm",
+  },
+  {
+    title: "Oziq-ovqat narxlari yana ko‘tarila boshladi",
+    desc: "Mutaxassislar bu holatni inflyatsiya bosimining ortishi bilan bog‘lashmoqda.",
+    time: "15:10",
+    category: "Iqtisod",
+  },
+  {
+    title: "Maktablarda yangi ta’lim standarti joriy qilinishi mumkin",
+    desc: "Hujjat jamoatchilik muhokamasiga qo‘yildi.",
+    time: "15:03",
+    category: "Jamiyat",
+  },
+  {
+    title: "Marsga parvoz 2030 yilda amalga oshirilishi mumkin",
+    desc: "NASA yangi missiya dasturini taqdim etdi.",
+    time: "14:58",
+    category: "Fan",
+  },
+  {
+    title: "Yangi serial Netflix TOP-10 ro‘yxatiga kirdi",
+    desc: "Serial qisqa fursatda tomoshabinlar orasida mashhurlashdi.",
+    time: "14:41",
+    category: "Madaniyat",
+  },
+  {
+    title: "YPX xodimi jasorati uchun mukofotlandi",
+    desc: "U bugun besh yo‘lovchining hayotini saqlab qoldi.",
+    time: "14:28",
+    category: "Hodisa",
+  },
+  {
+    title: "Toshkentda yangi metro yo‘nalishi ochilishi kutilmoqda",
+    desc: "Yangi yo‘nalish poytaxtdagi tirbandliklarni kamaytirishga yordam beradi.",
+    time: "14:10",
+    category: "Shahar",
+  },
+];
+
 export interface NewsItem {
   title: string;
   image: string;
