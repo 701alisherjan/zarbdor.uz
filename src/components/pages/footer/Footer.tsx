@@ -12,7 +12,7 @@ export default function Footer() {
                 alt="Zarbdor.uz"
                 className="h-7 w-auto"
               />
-              <span className="ml-2 font-bold text-lg">ZARBDOR.uz</span>
+              <span className="ml-2 font-bold text-lg">ARBDOR.uz</span>
             </div>
           </div>
 
