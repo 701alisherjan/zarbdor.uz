@@ -1,18 +1,29 @@
 import { SOCIAL_ICONS } from "@/constants";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+  const navigate = useNavigate();
+
+  const handleAdminRedirect = () => {
+    // Admin email/parol checkni shu yerda qilishingiz mumkin
+    navigate("/admin/login"); // admin login sahifasiga yo'naltiradi
+  };
+
   return (
     <footer className="w-full border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white">
       <div className="max-w-7xl mx-auto py-10 px-5 flex flex-col lg:flex-row justify-between gap-10">
         <div className="flex flex-col gap-5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 flex items-center">
+            <div
+              className="w-10 h-10 flex items-center cursor-pointer"
+              onDoubleClick={handleAdminRedirect} // ikki marta bosilganda ishlaydi
+            >
               <img
                 src="https://png.pngtree.com/png-vector/20230209/ourmid/pngtree-letter-z-logo-png-image_6590691.png"
                 alt="Zarbdor.uz"
                 className="h-7 w-auto"
               />
-              <span className="ml-2 font-bold text-lg">ARBDOR.uz</span>
+              <span className="font-bold text-lg">ARBDOR.uz</span>
             </div>
           </div>
 
@@ -69,3 +80,4 @@ export default function Footer() {
     </footer>
   );
 }
+  
