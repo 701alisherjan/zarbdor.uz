@@ -148,7 +148,6 @@ export interface NewsCategory {
   items: NewsItem[];
 }
 
-
 export const newsData: NewsCategory[] = [
   {
     name: "Jamiyat",
@@ -331,4 +330,24 @@ export const videoCards: VideoItem[] = [
     tag: "Jamiyat",
     date: "Bugun",
   },
+];
+export interface SidebarButton {
+  label: string;
+  route: string;
+}
+
+export const sidebarButtons: SidebarButton[] = [
+  {
+    label: "Bosh sahifa videolarini qo'shish",
+    route: "/admin/dashboard/home-videos",
+  },
+  {
+    label: "Jonli efir maqolalarini qo'shish",
+    route: "/admin/dashboard/live-news",
+  },
+  {
+    label: "So'nggi yangiliklarni qo'shish",
+    route: "/admin/dashboard/latest-news",
+  },
+  { label: "Trenddagilarni qo'shish", route: "/admin/dashboard/trending" },
 ];
