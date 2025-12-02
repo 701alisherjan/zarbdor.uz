@@ -49,6 +49,81 @@ export const SOCIAL_ICONS = [
   },
 ];
 
+export const liveItems = [
+  {
+    title: "O‘zbekistonda yangi aeroport qurilishi boshlandi",
+    desc: "Loyiha 2026 yilgacha bosqichma-bosqich amalga oshirilishi rejalashtirilgan.",
+    time: "15:48",
+    category: "Iqtisod",
+  },
+  {
+    title: "Toshkentda kuchli shamol daraxtlarni qulatdi",
+    desc: "Hozircha jabrlanganlar haqida rasmiy ma’lumot berilmadi.",
+    time: "15:42",
+    category: "Ob-havo",
+  },
+  {
+    title: "FIFA 2026 yil uchun yangi qoidalarni e’lon qildi",
+    desc: "Yangi format futbol muxlislari va ekspertlar orasida keng muhokama qilinmoqda.",
+    time: "15:36",
+    category: "Sport",
+  },
+  {
+    title: "Rossiya–Ukraina chegarasida vaziyat keskinlashdi",
+    desc: "Tomonlar o‘zaro ayblovlar bilan chiqishda davom etmoqda.",
+    time: "15:31",
+    category: "Dunyo",
+  },
+  {
+    title: "iPhone 17 Ultra haqida dastlabki ma’lumotlar paydo bo‘ldi",
+    desc: "Model kamerasi va batareyasi sezilarli darajada yaxshilanishi kutilmoqda.",
+    time: "15:24",
+    category: "Texnologiya",
+  },
+  {
+    title: "Samarqandda yangi turizm markazi ochildi",
+    desc: "Markaz bir vaqtning o‘zida 10 ming turistni qabul qila oladi.",
+    time: "15:18",
+    category: "Turizm",
+  },
+  {
+    title: "Oziq-ovqat narxlari yana ko‘tarila boshladi",
+    desc: "Mutaxassislar bu holatni inflyatsiya bosimining ortishi bilan bog‘lashmoqda.",
+    time: "15:10",
+    category: "Iqtisod",
+  },
+  {
+    title: "Maktablarda yangi ta’lim standarti joriy qilinishi mumkin",
+    desc: "Hujjat jamoatchilik muhokamasiga qo‘yildi.",
+    time: "15:03",
+    category: "Jamiyat",
+  },
+  {
+    title: "Marsga parvoz 2030 yilda amalga oshirilishi mumkin",
+    desc: "NASA yangi missiya dasturini taqdim etdi.",
+    time: "14:58",
+    category: "Fan",
+  },
+  {
+    title: "Yangi serial Netflix TOP-10 ro‘yxatiga kirdi",
+    desc: "Serial qisqa fursatda tomoshabinlar orasida mashhurlashdi.",
+    time: "14:41",
+    category: "Madaniyat",
+  },
+  {
+    title: "YPX xodimi jasorati uchun mukofotlandi",
+    desc: "U bugun besh yo‘lovchining hayotini saqlab qoldi.",
+    time: "14:28",
+    category: "Hodisa",
+  },
+  {
+    title: "Toshkentda yangi metro yo‘nalishi ochilishi kutilmoqda",
+    desc: "Yangi yo‘nalish poytaxtdagi tirbandliklarni kamaytirishga yordam beradi.",
+    time: "14:10",
+    category: "Shahar",
+  },
+];
+
 export interface NewsItem {
   title: string;
   image: string;
@@ -158,3 +233,124 @@ export const newsData: NewsCategory[] = [
     ],
   },
 ];
+<<<<<<< HEAD
+=======
+// src/constants/videos.ts
+export interface VideoItem {
+  id: string;
+  href?: string;
+  img: string;
+  videoUrl: string;
+  alt?: string;
+  title: string;
+  date: string;
+  tag: string;
+}
+
+export const topCards: VideoItem[] = [
+  {
+    id: "101",
+    href: "/video/101",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO0k4-ejPhzcTnAHdZsxHPMFvYyAB8NCysAg&s",
+    videoUrl: "https://www.youtube.com/embed/v-9LW78-JPs",
+    title: "🇺🇿 Toshkentda IT-Parkda yirik konferensiya bo‘lib o‘tdi",
+    tag: "Texnologiya",
+    date: "Bugun",
+  },
+  {
+    id: "102",
+    href: "/video/102",
+    img: "https://president.uz/uploads/27476c68-63f8-a553-6838-ba3f71e99a25.jpg",
+    videoUrl: "https://www.youtube.com/embed/JiTHfE-qYGw",
+    title: "🤝 Prezidentimiz Turkiyaga rasmiy tashrif buyurdi",
+    tag: "Siyosat",
+    date: "Kecha",
+  },
+  {
+    id: "103",
+    href: "/video/103",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTNLJ5i_GvsowG7QP5vcRjlTWuPojyLvC8cQ&ss",
+    videoUrl: "https://www.youtube.com/embed/FYaVqZa2uOw",
+    title: "⚽️ O‘zbekiston terma jamoasi Osiyo Kubogiga tayyorlanmoqda",
+    tag: "Sport",
+    date: "12:30",
+  },
+];
+
+export const videoCards: VideoItem[] = [
+  {
+    id: "1",
+    href: "/video/1",
+    img: "https://img.youtube.com/vi/2Vv-BfVoq4g/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/2Vv-BfVoq4g",
+    title: "📈 2025 yilda O‘zbekistonda IT eksporti 1 mlrd $ ga yetishi mumkin",
+    tag: "Iqtisod",
+    date: "10:05",
+  },
+  {
+    id: "2",
+    href: "/video/2",
+    img: "https://img.youtube.com/vi/kXYiU_JCYtU/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/kXYiU_JCYtU",
+    title: "📚 Yangi maktablar qurilishi boshlangan — Sirdaryo viloyatida",
+    tag: "Jamiyat",
+    date: "Bugun",
+  },
+  {
+    id: "2",
+    href: "/video/2",
+    img: "https://img.youtube.com/vi/kXYiU_JCYtU/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/kXYiU_JCYtU",
+    title: "📚 Yangi maktablar qurilishi boshlangan — Sirdaryo viloyatida",
+    tag: "Jamiyat",
+    date: "Bugun",
+  },
+  {
+    id: "2",
+    href: "/video/2",
+    img: "https://img.youtube.com/vi/kXYiU_JCYtU/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/kXYiU_JCYtU",
+    title: "📚 Yangi maktablar qurilishi boshlangan — Sirdaryo viloyatida",
+    tag: "Jamiyat",
+    date: "Bugun",
+  },
+  {
+    id: "2",
+    href: "/video/2",
+    img: "https://img.youtube.com/vi/kXYiU_JCYtU/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/kXYiU_JCYtU",
+    title: "📚 Yangi maktablar qurilishi boshlangan — Sirdaryo viloyatida",
+    tag: "Jamiyat",
+    date: "Bugun",
+  },
+  {
+    id: "2",
+    href: "/video/2",
+    img: "https://img.youtube.com/vi/kXYiU_JCYtU/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/kXYiU_JCYtU",
+    title: "📚 Yangi maktablar qurilishi boshlangan — Sirdaryo viloyatida",
+    tag: "Jamiyat",
+    date: "Bugun",
+  },
+];
+export interface SidebarButton {
+  label: string;
+  route: string;
+}
+
+export const sidebarButtons: SidebarButton[] = [
+  {
+    label: "Bosh sahifa videolarini qo'shish",
+    route: "/admin/dashboard/home-videos",
+  },
+  {
+    label: "Jonli efir maqolalarini qo'shish",
+    route: "/admin/dashboard/live-news",
+  },
+  {
+    label: "So'nggi yangiliklarni qo'shish",
+    route: "/admin/dashboard/latest-news",
+  },
+  { label: "Trenddagilarni qo'shish", route: "/admin/dashboard/trending" },
+];
+>>>>>>> ebebc9698fc5b0147d8269e16d671aba2f9f90dd
