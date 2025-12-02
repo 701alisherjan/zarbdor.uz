@@ -4,6 +4,7 @@ import Navbar from "./components/pages/navbar/Navbar";
 import Footer from "./components/pages/footer/Footer";
 import AdminLogin from "./admin/adminLogin/AdminLogin";
 import PrivateRoute from "./admin/adminLogin/PrivateRoute";
+
 import AdminLayout from "./admin/dashboard";
 import HomeDashboard from "./admin/sidebarItems/homeDashboard";
 import LiveDashboard from "./admin/sidebarItems/liveDashboard";
@@ -27,14 +28,12 @@ export default function App() {
       <Route path="/admin/login" element={<AdminLogin />} />
 
       <Route element={<PrivateRoute />}>
-        <Route path="/admin/dashboard" element={<AdminLayout />} />
-        <Route
-          path="/admin/dashboard/home-videos"
-          element={<HomeDashboard />}
-        />
-        <Route path="/admin/dashboard/live-news" element={<LiveDashboard />} />
-        <Route path="/admin/dashboard/latest-news" element={<EndDashboard />} />
-        <Route path="/admin/dashboard/trending" element={<TrendDashboard />} />
+        <Route path="/admin/dashboard" element={<AdminLayout />}>
+          <Route path="home-videos" element={<HomeDashboard />} />
+          <Route path="live-news" element={<LiveDashboard />} />
+          <Route path="latest-news" element={<EndDashboard />} />
+          <Route path="trending" element={<TrendDashboard />} />
+        </Route>
       </Route>
     </Routes>
   );
