@@ -233,8 +233,7 @@ export const newsData: NewsCategory[] = [
     ],
   },
 ];
-<<<<<<< HEAD
-=======
+
 // src/constants/videos.ts
 export interface VideoItem {
   id: string;
@@ -353,4 +352,3 @@ export const sidebarButtons: SidebarButton[] = [
   },
   { label: "Trenddagilarni qo'shish", route: "/admin/dashboard/trending" },
 ];
->>>>>>> ebebc9698fc5b0147d8269e16d671aba2f9f90dd
