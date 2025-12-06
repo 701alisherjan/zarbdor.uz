@@ -5,8 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function AdminLogin() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+
+  // Email va parol oldindan to'ldirilgan
+  const [email, setEmail] = useState("admin@gmail.com");
+  const [password, setPassword] = useState("admin1");
   const [error, setError] = useState("");
 
   const handleLogin = () => {
@@ -18,7 +20,7 @@ export default function AdminLogin() {
     }
   };
 
-  // ENTER BOSILGANDA LOGIN
+  // ENTER bosilganda login
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       handleLogin();
@@ -48,7 +50,7 @@ export default function AdminLogin() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="w-full px-4 py-2 mb-4 rounded-md bg-white/40 dark:bg-gray-800/40 border border-white/50 dark:border-gray-600  placeholder-gray-500 focus:outline-none"
+          className="w-full px-4 py-2 mb-4 rounded-md bg-white/40 dark:bg-gray-800/40 border border-white/50 dark:border-gray-600 placeholder-gray-500 focus:outline-none"
         />
 
         <input
@@ -57,7 +59,7 @@ export default function AdminLogin() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="w-full px-4 py-2 mb-6 rounded-md bg-white/40 dark:bg-gray-800/40 border border-white/50 dark:border-gray-600 text-white placeholder-gray-500  focus:outline-none"
+          className="w-full px-4 py-2 mb-6 rounded-md bg-white/40 dark:bg-gray-800/40 border border-white/50 dark:border-gray-600 text-white placeholder-gray-500 focus:outline-none"
         />
 
         <button
