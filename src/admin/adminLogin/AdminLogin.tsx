@@ -10,7 +10,7 @@ export default function AdminLogin() {
   const [error, setError] = useState("");
 
   const handleLogin = () => {
-    if (email === "admin@pc.local" && password === "admin1") {
+    if (email === "admin@gmail.com" && password === "admin1") {
       localStorage.setItem("adminToken", "12345");
       navigate("/admin/dashboard");
     } else {
